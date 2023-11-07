@@ -88,7 +88,7 @@ def login(username: str, password: str) -> req_Session:
     }
     login_url = "https://hostloc.com/member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes&inajax=1"
     login_data = {
-        "fastloginfield": "账号",
+        "fastloginfield": "username",
         "username": '账号',
         "password": '密码',
         "quickforward": "yes",
@@ -161,7 +161,7 @@ def get_points(s: req_Session, number_c: int):
 
 # 打印输出当前ip地址
 def print_my_ip():
-    api_url = "https://ip.moeyy.cn/"
+    api_url = "https://api.ipify.org/"
     try:
         res = requests.get(url=api_url)
         res.raise_for_status()
